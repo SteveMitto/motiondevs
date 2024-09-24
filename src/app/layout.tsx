@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     
     <html lang="en">
-      <body className={`${poppins.className} w-dvw max-w-[100dvw] h-dvh overflow-x-hidden`}>
+      <body className={`${poppins.className} w-dvw max-w-[100dvw] h-screen overflow-x-hidden`}>
         {children}
         <Toaster />
       </body>

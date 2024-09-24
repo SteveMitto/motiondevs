@@ -7,7 +7,7 @@ function Hero() {
   return (
     <div className="">
         <div className="w-full text-center flex flex-col items-center justify-center gap-3">
-          <h1 className="text-4xl w-7/12 font-bold text-black leading-relaxed">Transforming the way you do business through 
+          <h1 className="text-5xl mt-9 w-9/12 font-bold text-slate-900 leading-relaxed">Transforming the way you do business through 
           <span className="bg-[rgb(8,163,239)] bg-[radial-gradient(circle, rgba(8,163,239,1) 0%, rgba(3,103,152,1) 50%, rgba(4,58,84,1) 100%)] bg-clip-text text-transparent">  innovative technology </span> 
            and 
           <span className="bg-[rgb(8,163,239)] bg-[radial-gradient(circle, rgba(8,163,239,1) 0%, rgba(3,103,152,1) 50%, rgba(4,58,84,1) 100%)] bg-clip-text text-transparent">  Digital Marketing</span> 
@@ -21,7 +21,6 @@ function Hero() {
         <div className="w-full h-[120vh] relative grid place-items-center">
           <Image src={bgImage.src} fill objectFit="cover" alt="motion developers bg" className=" -z-10"/>
           <Image src={lis.src} width={700} height={500} alt="motion developers bg" className="relative -z-10"/>
-          
         </div>
       </div>
   )

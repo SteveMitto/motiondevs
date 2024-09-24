@@ -20,11 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    
     <html lang="en">
-      <body className={`${poppins.className} w-dvw max-w-[100dvw] h-screen overflow-x-hidden`}>
+      <body className={`${poppins.className} w-dvw max-w-[100dvw] h-screen overflow-x-hidden bg-whitesmoke`}>
         {children}
-        <Toaster />
+        <Toaster position="bottom-right"  reverseOrder={true} />
       </body>
     </html>
   );

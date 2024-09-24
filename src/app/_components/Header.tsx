@@ -11,7 +11,7 @@ export default function Header() {
   const links = [
     { name: "Home", path: "/" },
     {
-      name: "Service",
+      name: "Services",
       path: "/services",
       links: [
         {
@@ -24,25 +24,25 @@ export default function Header() {
           id: 1,
           name: "Graphics Design",
           desc: "UX/UI Design, Posters, Logos, Banners",
-          path: "/services/software-development",
+          path: "/services/graphics-design",
         },
         {
           id: 2,
-          name: "Online Marketing",
+          name: "Social Media Marketing",
           desc: "Get leads from Facebook, Youtube & Instagram ads",
-          path: "/services/software-development",
+          path: "/services/social-media-marketing",
         },
         {
           id: 3,
           name: "SEO Optimization",
           desc: "Make your website more discoverable",
-          path: "/services/software-development",
+          path: "/services/seo-optimization",
         },
         {
           id: 4,
           name: "API Development",
           desc: "We develope full functional APIs",
-          path: "/services/software-development",
+          path: "/services/api-development",
         },
       ],
     },
@@ -143,18 +143,15 @@ export default function Header() {
                 {links.map((link, index) =>
                 link.links ? (
                     <Popover className="" key={index}>
-                    <PopoverButton className="h-[50px] focus:outline-none data-[active]:text-blue data-[hover]:text-blue data-[focus]:outline-1 data-[focus]:outline-blue">
+                    <PopoverButton className={`${pathname.includes(link.path) ? "text-blue" : ""} h-[50px] focus:outline-none data-[active]:text-blue data-[hover]:text-blue data-[focus]:outline-1 data-[focus]:outline-blue`}>
                         {link.name}
-                        {pathname == link.path && (
-                        <span className="absolute top-full h-1 w-9/12 rounded-full bg-blue"></span>
-                        )}
                     </PopoverButton>
                         <PopoverPanel anchor="bottom" className="revival z-[100] shadow-md flex flex-col text-slate-900 text-xs bg-whitesmoke/90 backdrop-blur-md rounded p-2 border border-slate-400/10">
                         {link.links.map((item) => (
                             <>
                             {item?.final && <hr className="my-1" />}
                             <Link key={item.id} href={item.path} className="flex flex-col px-3 py-3 rounded-md hover:bg-blue/10 hover:text-blue">
-                            <span className="font-bold">{item.name}</span>
+                            <span className={`${pathname.includes(item.path) ? "text-blue" : ""} font-bold`}>{item.name}</span>
                             {item.desc && <span className="text-xs font-medium text-neutral-500 mt-1"> {item.desc}</span>}
                             </Link>
                             </>

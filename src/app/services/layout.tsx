@@ -8,9 +8,11 @@ export const metadata: Metadata = {
 
 export default function Layout({children}: {children: React.ReactNode}) {
   return (
-    <div className="w-full p-4">
+    <div className="w-full ">
         <Header />
+        <div className="p-4">
         {children}
+        </div>
     </div>
   );
 }

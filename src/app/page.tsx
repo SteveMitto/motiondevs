@@ -5,11 +5,11 @@ import SocialProof from "./_components/SocialProof";
 
 export default function Home() {
   return (
-    <>
+    <div className="relative">
       <Header />
       <Hero />
       <SocialProof />
       <OurServices />
-    </>
+    </div>
   );
 }
